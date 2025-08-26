@@ -6,8 +6,16 @@ import { Button } from '@/components/ui/button';
 const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background com gradiente */}
-      <div className="absolute inset-0 hero-gradient-overlay"></div>
+      {/* Background com imagem da loja */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/76fcb485-4f16-4e21-88f1-61d6210f14fb.png')`
+        }}
+      ></div>
+      
+      {/* Overlay escuro para melhorar legibilidade */}
+      <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Padrão de construção sutil */}
       <div className="absolute inset-0 opacity-10">
