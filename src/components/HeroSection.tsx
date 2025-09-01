@@ -1,18 +1,12 @@
-
 import React from 'react';
 import { ArrowRight, Star, Shield, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const HeroSection = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background com imagem da loja */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/76fcb485-4f16-4e21-88f1-61d6210f14fb.png')`
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url('/lovable-uploads/76fcb485-4f16-4e21-88f1-61d6210f14fb.png')`
+    }}></div>
       
       {/* Overlay escuro para melhorar legibilidade */}
       <div className="absolute inset-0 bg-black/60"></div>
@@ -60,20 +54,13 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
-              <Button 
-                size="lg"
-                onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-hero group"
-              >
+              <Button size="lg" onClick={() => document.getElementById('servicos')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="btn-hero group">
                 Nossos Serviços
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                onClick={() => window.open('https://wa.me/5584988637195', '_blank')}
-                className="btn-hero"
-              >
+              <Button size="lg" variant="outline" onClick={() => window.open('https://wa.me/5584988637195', '_blank')} className="btn-hero bg-[#e1bb3b]">
                 Fale Conosco
               </Button>
             </div>
@@ -134,8 +121,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
