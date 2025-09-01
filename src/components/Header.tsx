@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -50,12 +49,8 @@ const Header = () => {
 
       {/* Header principal */}
       <header 
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
-        }`}
-        style={{ marginTop: isScrolled ? '0' : window.innerWidth >= 1024 ? '40px' : '0' }}
+        className="fixed top-0 left-0 right-0 z-40 bg-white shadow-md"
+        style={{ marginTop: window.innerWidth >= 1024 ? '40px' : '0' }}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
@@ -72,41 +67,25 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               <button
                 onClick={() => scrollToSection('inicio')}
-                className={`font-medium text-sm xl:text-base transition-colors ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
+                className="font-medium text-sm xl:text-base transition-colors text-foreground hover:text-primary"
               >
                 Início
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className={`font-medium text-sm xl:text-base transition-colors ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
+                className="font-medium text-sm xl:text-base transition-colors text-foreground hover:text-primary"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection('servicos')}
-                className={`font-medium text-sm xl:text-base transition-colors ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
+                className="font-medium text-sm xl:text-base transition-colors text-foreground hover:text-primary"
               >
                 Serviços
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className={`font-medium text-sm xl:text-base transition-colors ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
+                className="font-medium text-sm xl:text-base transition-colors text-foreground hover:text-primary"
               >
                 Contato
               </button>
@@ -122,11 +101,7 @@ const Header = () => {
             {/* Menu Mobile Toggle */}
             <button
               onClick={toggleMenu}
-              className={`lg:hidden p-2 rounded-lg transition-colors ${
-                isScrolled 
-                  ? 'text-foreground hover:bg-secondary' 
-                  : 'text-white hover:bg-white/10'
-              }`}
+              className="lg:hidden p-2 rounded-lg transition-colors text-foreground hover:bg-secondary"
             >
               {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
@@ -138,56 +113,36 @@ const Header = () => {
               <div className="flex flex-col space-y-4">
                 <button
                   onClick={() => scrollToSection('inicio')}
-                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-primary'
-                  }`}
+                  className="font-medium text-left text-sm sm:text-base transition-colors text-foreground hover:text-primary"
                 >
                   Início
                 </button>
                 <button
                   onClick={() => scrollToSection('sobre')}
-                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-primary'
-                  }`}
+                  className="font-medium text-left text-sm sm:text-base transition-colors text-foreground hover:text-primary"
                 >
                   Sobre
                 </button>
                 <button
                   onClick={() => scrollToSection('servicos')}
-                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-primary'
-                  }`}
+                  className="font-medium text-left text-sm sm:text-base transition-colors text-foreground hover:text-primary"
                 >
                   Serviços
                 </button>
                 <button
                   onClick={() => scrollToSection('contato')}
-                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-primary'
-                  }`}
+                  className="font-medium text-left text-sm sm:text-base transition-colors text-foreground hover:text-primary"
                 >
                   Contato
                 </button>
                 
                 {/* Informações de contato no mobile */}
-                <div className="pt-4 mt-4 border-t border-white/10 space-y-3">
-                  <div className={`flex items-center text-xs sm:text-sm ${
-                    isScrolled ? 'text-muted-foreground' : 'text-white/80'
-                  }`}>
+                <div className="pt-4 mt-4 border-t border-border/10 space-y-3">
+                  <div className="flex items-center text-xs sm:text-sm text-muted-foreground">
                     <Phone className="w-4 h-4 mr-2" />
                     <span>(84) 9 8863-7195</span>
                   </div>
-                  <div className={`flex items-center text-xs sm:text-sm ${
-                    isScrolled ? 'text-muted-foreground' : 'text-white/80'
-                  }`}>
+                  <div className="flex items-center text-xs sm:text-sm text-muted-foreground">
                     <Clock className="w-4 h-4 mr-2" />
                     <span>Seg-Sáb: 07h às 17h</span>
                   </div>
