@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Heart } from 'lucide-react';
 
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/67dab848-9d89-4d81-8eb3-e2a76ec24f3c.png" 
+                src="/lovable-uploads/f1c1fe08-f392-46c8-93ab-fa5232590eb8.png" 
                 alt="Depósito Príncipe Davi" 
                 className="h-16 w-auto mr-3"
               />
