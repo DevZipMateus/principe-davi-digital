@@ -31,18 +31,18 @@ const WhatsAppFloat = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-lg p-4 mb-2 max-w-xs animate-fade-in-up">
+        <div className="absolute bottom-12 sm:bottom-16 right-0 bg-white rounded-lg shadow-lg p-3 sm:p-4 mb-2 max-w-xs animate-fade-in-up">
           <button
             onClick={() => setShowTooltip(false)}
-            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            className="absolute top-1 sm:top-2 right-1 sm:right-2 text-gray-400 hover:text-gray-600"
           >
-            <X className="w-4 h-4" />
+            <X className="w-3 h-3 sm:w-4 sm:h-4" />
           </button>
-          <div className="pr-6">
-            <p className="text-sm font-medium text-gray-900 mb-1">
+          <div className="pr-4 sm:pr-6">
+            <p className="text-xs sm:text-sm font-medium text-gray-900 mb-1">
               Precisa de ajuda?
             </p>
             <p className="text-xs text-gray-600">
@@ -50,7 +50,7 @@ const WhatsAppFloat = () => {
             </p>
           </div>
           {/* Seta do tooltip */}
-          <div className="absolute bottom-0 right-6 transform translate-y-full">
+          <div className="absolute bottom-0 right-4 sm:right-6 transform translate-y-full">
             <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
           </div>
         </div>
@@ -59,10 +59,10 @@ const WhatsAppFloat = () => {
       {/* Botão WhatsApp */}
       <button
         onClick={handleWhatsAppClick}
-        className="whatsapp-float group"
+        className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group"
         aria-label="Conversar no WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         
         {/* Animação de pulse */}
         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>

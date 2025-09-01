@@ -28,21 +28,21 @@ const Header = () => {
 
   return (
     <>
-      {/* Top bar com informações de contato */}
-      <div className="bg-warm-gray text-white py-2 px-4 text-sm hidden md:block">
+      {/* Top bar com informações de contato - oculto em mobile */}
+      <div className="bg-warm-gray text-white py-2 px-4 text-sm hidden lg:block">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 xl:space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>(84) 9 8863-7195</span>
+              <span className="text-xs xl:text-sm">(84) 9 8863-7195</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>alinevivianeguimaraes@gmail.com</span>
+              <span className="text-xs xl:text-sm">alinevivianeguimaraes@gmail.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
-              <span>Seg-Sáb: 07h às 17h</span>
+              <span className="text-xs xl:text-sm">Seg-Sáb: 07h às 17h</span>
             </div>
           </div>
         </div>
@@ -55,22 +55,22 @@ const Header = () => {
             ? 'bg-white/95 backdrop-blur-md shadow-lg' 
             : 'bg-transparent'
         }`}
-        style={{ marginTop: isScrolled ? '0' : '40px' }}
+        style={{ marginTop: isScrolled ? '0' : window.innerWidth >= 1024 ? '40px' : '0' }}
       >
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="bg-primary text-primary-foreground p-3 rounded-xl font-heading font-bold text-xl">
+              <div className="bg-primary text-primary-foreground p-2 sm:p-3 rounded-xl font-heading font-bold text-lg sm:text-xl">
                 DP
               </div>
-              <div className="ml-3">
-                <h1 className={`font-heading font-bold text-xl ${
+              <div className="ml-2 sm:ml-3">
+                <h1 className={`font-heading font-bold text-base sm:text-lg lg:text-xl ${
                   isScrolled ? 'text-foreground' : 'text-white'
                 }`}>
                   Depósito Príncipe Davi
                 </h1>
-                <p className={`text-sm ${
+                <p className={`text-xs sm:text-sm ${
                   isScrolled ? 'text-muted-foreground' : 'text-white/80'
                 }`}>
                   Material de Construção
@@ -79,10 +79,10 @@ const Header = () => {
             </div>
 
             {/* Menu Desktop */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               <button
                 onClick={() => scrollToSection('inicio')}
-                className={`font-medium transition-colors ${
+                className={`font-medium text-sm xl:text-base transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary' 
                     : 'text-white hover:text-primary'
@@ -92,7 +92,7 @@ const Header = () => {
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className={`font-medium transition-colors ${
+                className={`font-medium text-sm xl:text-base transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary' 
                     : 'text-white hover:text-primary'
@@ -102,7 +102,7 @@ const Header = () => {
               </button>
               <button
                 onClick={() => scrollToSection('servicos')}
-                className={`font-medium transition-colors ${
+                className={`font-medium text-sm xl:text-base transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary' 
                     : 'text-white hover:text-primary'
@@ -112,7 +112,7 @@ const Header = () => {
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className={`font-medium transition-colors ${
+                className={`font-medium text-sm xl:text-base transition-colors ${
                   isScrolled 
                     ? 'text-foreground hover:text-primary' 
                     : 'text-white hover:text-primary'
@@ -122,7 +122,8 @@ const Header = () => {
               </button>
               <Button
                 onClick={() => window.open('https://wa.me/5584988637195', '_blank')}
-                className="btn-whatsapp"
+                className="btn-whatsapp text-sm"
+                size="sm"
               >
                 WhatsApp
               </Button>
@@ -131,23 +132,23 @@ const Header = () => {
             {/* Menu Mobile Toggle */}
             <button
               onClick={toggleMenu}
-              className={`md:hidden p-2 rounded-lg transition-colors ${
+              className={`lg:hidden p-2 rounded-lg transition-colors ${
                 isScrolled 
                   ? 'text-foreground hover:bg-secondary' 
                   : 'text-white hover:bg-white/10'
               }`}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
 
           {/* Menu Mobile */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 py-4 border-t border-border/10">
+            <div className="lg:hidden mt-4 py-4 border-t border-border/10">
               <div className="flex flex-col space-y-4">
                 <button
                   onClick={() => scrollToSection('inicio')}
-                  className={`font-medium text-left transition-colors ${
+                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
                     isScrolled 
                       ? 'text-foreground hover:text-primary' 
                       : 'text-white hover:text-primary'
@@ -157,7 +158,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => scrollToSection('sobre')}
-                  className={`font-medium text-left transition-colors ${
+                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
                     isScrolled 
                       ? 'text-foreground hover:text-primary' 
                       : 'text-white hover:text-primary'
@@ -167,7 +168,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => scrollToSection('servicos')}
-                  className={`font-medium text-left transition-colors ${
+                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
                     isScrolled 
                       ? 'text-foreground hover:text-primary' 
                       : 'text-white hover:text-primary'
@@ -177,7 +178,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => scrollToSection('contato')}
-                  className={`font-medium text-left transition-colors ${
+                  className={`font-medium text-left text-sm sm:text-base transition-colors ${
                     isScrolled 
                       ? 'text-foreground hover:text-primary' 
                       : 'text-white hover:text-primary'
@@ -185,9 +186,26 @@ const Header = () => {
                 >
                   Contato
                 </button>
+                
+                {/* Informações de contato no mobile */}
+                <div className="pt-4 mt-4 border-t border-white/10 space-y-3">
+                  <div className={`flex items-center text-xs sm:text-sm ${
+                    isScrolled ? 'text-muted-foreground' : 'text-white/80'
+                  }`}>
+                    <Phone className="w-4 h-4 mr-2" />
+                    <span>(84) 9 8863-7195</span>
+                  </div>
+                  <div className={`flex items-center text-xs sm:text-sm ${
+                    isScrolled ? 'text-muted-foreground' : 'text-white/80'
+                  }`}>
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>Seg-Sáb: 07h às 17h</span>
+                  </div>
+                </div>
+                
                 <Button
                   onClick={() => window.open('https://wa.me/5584988637195', '_blank')}
-                  className="btn-whatsapp w-full"
+                  className="btn-whatsapp w-full mt-4"
                 >
                   WhatsApp
                 </Button>
