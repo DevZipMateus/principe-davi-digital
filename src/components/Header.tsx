@@ -61,21 +61,11 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="bg-primary text-primary-foreground p-2 sm:p-3 rounded-xl font-heading font-bold text-lg sm:text-xl">
-                DP
-              </div>
-              <div className="ml-2 sm:ml-3">
-                <h1 className={`font-heading font-bold text-base sm:text-lg lg:text-xl ${
-                  isScrolled ? 'text-foreground' : 'text-white'
-                }`}>
-                  Depósito Príncipe Davi
-                </h1>
-                <p className={`text-xs sm:text-sm ${
-                  isScrolled ? 'text-muted-foreground' : 'text-white/80'
-                }`}>
-                  Material de Construção
-                </p>
-              </div>
+              <img 
+                src="/lovable-uploads/67dab848-9d89-4d81-8eb3-e2a76ec24f3c.png" 
+                alt="Depósito Príncipe Davi" 
+                className="h-12 sm:h-14 lg:h-16 w-auto"
+              />
             </div>
 
             {/* Menu Desktop */}

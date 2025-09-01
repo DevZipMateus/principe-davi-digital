@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Heart } from 'lucide-react';
 
@@ -10,13 +9,11 @@ const Footer = () => {
           {/* Logo e Descrição */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="bg-primary text-primary-foreground p-3 rounded-xl font-heading font-bold text-xl mr-3">
-                DP
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-xl">Depósito Príncipe Davi</h3>
-                <p className="text-white/70 text-sm">Material de Construção</p>
-              </div>
+              <img 
+                src="/lovable-uploads/67dab848-9d89-4d81-8eb3-e2a76ec24f3c.png" 
+                alt="Depósito Príncipe Davi" 
+                className="h-16 w-auto mr-3"
+              />
             </div>
             <p className="text-white/80 leading-relaxed mb-6 max-w-md">
               Um sonho realizado através da fé e dedicação. Oferecemos materiais de construção 
