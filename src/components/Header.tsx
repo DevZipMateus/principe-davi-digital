@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -48,7 +49,7 @@ const Header = () => {
       </div>
 
       {/* Header principal */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-md lg:top-[40px]">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-md">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
