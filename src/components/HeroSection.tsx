@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Star, Shield, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -85,7 +84,7 @@ const HeroSection = () => {
               {/* Card principal */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
                 <div className="text-center">
-                  <div className="bg-white/20 rounded-full w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex items-center justify-center mx-auto mb-4 sm:mb-6 p-3">
+                  <div className="bg-white/20 rounded-full w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 flex items-center justify-center mx-auto mb-4 sm:mb-6 p-4">
                     <img 
                       src="/lovable-uploads/8d2b0c1e-ffc6-4252-9485-5e4e8c27563c.png" 
                       alt="Depósito Príncipe Davi" 
