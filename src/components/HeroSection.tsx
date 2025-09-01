@@ -85,7 +85,7 @@ const HeroSection = () => {
               {/* Card principal */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
                 <div className="text-center">
-                  <div className="bg-white/20 rounded-full w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 flex items-center justify-center mx-auto mb-4 sm:mb-6 p-4">
+                  <div className="flex items-center justify-center mx-auto mb-4 sm:mb-6 w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56">
                     <img 
                       src="/lovable-uploads/8d2b0c1e-ffc6-4252-9485-5e4e8c27563c.png" 
                       alt="Depósito Príncipe Davi" 
